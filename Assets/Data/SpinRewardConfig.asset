@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7554523d391bee42a42c3b2ea8cb72b, type: 3}
+  m_Name: SpinRewardConfig
+  m_EditorClassIdentifier: 
+  _oneSpinCost: 50
+  _frozenCost: 50
+  _magicCost: 100
+  _fireCost: 300
+  _rewardConfig:
+  - SlotType: 1
+    Count: 2
+    Reward: 200
+  - SlotType: 2
+    Count: 2
+    Reward: 100
+  - SlotType: 3
+    Count: 2
+    Reward: 50
+  - SlotType: 4
+    Count: 2
+    Reward: 150
+  - SlotType: 5
+    Count: 2
+    Reward: 200
+  - SlotType: 6
+    Count: 2
+    Reward: 75
+  - SlotType: 7
+    Count: 2
+    Reward: 100
+  - SlotType: 1
+    Count: 3
+    Reward: 500
+  - SlotType: 2
+    Count: 3
+    Reward: 200
+  - SlotType: 3
+    Count: 3
+    Reward: 100
+  - SlotType: 4
+    Count: 3
+    Reward: 250
+  - SlotType: 5
+    Count: 3
+    Reward: 500
+  - SlotType: 6
+    Count: 3
+    Reward: 150
+  - SlotType: 7
+    Count: 3
+    Reward: 200

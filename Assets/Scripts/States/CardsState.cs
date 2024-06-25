@@ -1,5 +1,5 @@
 
-public class SlotState : IState
+public class CardsState : IState
 {
     public void Enter()
     {

@@ -81,4 +81,12 @@ public class SlotSpinModel
             OnIsRewarClaimedChanged?.Invoke();
         } 
     }
+
+    public void Clear()
+    {
+        _isSpin = false;
+        _isMiniGameSpin = false;
+        _isMiniGame = false;
+        _isRewarClaimed = true;
+    }
 }

@@ -8,7 +8,7 @@ public class GameStateMachine {
     public GameStateMachine() {
         _states = new Dictionary<Type, IState>()
         {
-            [typeof(SlotState)] = new SlotState(),
+            [typeof(CardsState)] = new CardsState(),
         };
     }
 

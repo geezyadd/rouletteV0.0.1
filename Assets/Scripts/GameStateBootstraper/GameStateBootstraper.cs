@@ -15,7 +15,7 @@ public class GameStateBootstraper : MonoBehaviour
 
     void Start()
     {
-        _gameStateMachine.Enter<SlotState>();
+        _gameStateMachine.Enter<CardsState>();
     }
 
     

@@ -71,7 +71,6 @@ public class RewardSystem : IInitializable, IDisposable
     private int MiniGameReward(int reward)
     {
         int countReward = SkillReward(reward);
-        Debug.LogError(_miniGameSlotModel.SkillType);
         if(_miniGameSlotModel.MiniGameType == MiniGameSlotType.X2)
         {
             _miniGameSlotModel.MiniGameType = MiniGameSlotType.None;

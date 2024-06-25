@@ -24,6 +24,12 @@ public class SlotSpin : MonoBehaviour
         _startSlotPosition = transform.localPosition;
     }
 
+    private void OnDisable()
+    {
+        StopAllCoroutines();
+        _isSpin = false;
+        _isSpinMove = false;
+    }
     public void Spin()
     {
         if(_isSpinMove || _bringToWin)

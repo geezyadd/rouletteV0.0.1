@@ -5,6 +5,9 @@ using Zenject;
 public class SpinStarter : MonoBehaviour
 {
     [SerializeField] private List<SlotSpin> _slots = new List<SlotSpin>();
+    [SerializeField] private GameObject _rouleteCanvas;
+    [SerializeField] private GameObject _slotsCanvas;
+    [SerializeField] private GameObject _cardsButton;
     private GameStateButtonsHandler _gameStateButtonsHandler;
     private SlotSpinModel _slotSpinModel;
     private MiniGameSpin _miniGameSpin;
@@ -28,6 +31,9 @@ public class SpinStarter : MonoBehaviour
 
     public void OnDisable()
     {
+        _slotSpinModel.IsSpin = false;
+        _slotSpinModel.IsMiniGameSpin = false;
+        _slotSpinModel.Clear();
         _gameStateButtonsHandler.OnSpinButtonClicked -= SpinSlots;
     }
 
@@ -35,12 +41,17 @@ public class SpinStarter : MonoBehaviour
     {
         if (!_slotSpinModel.IsSpin && !_slotSpinModel.IsMiniGameSpin && _slotSpinModel.IsMiniGame)
         {
+            _cardsButton.SetActive(false);
+            _slotsCanvas.SetActive(false);
+            _rouleteCanvas.SetActive(true);
             _slotSpinModel.IsMiniGameSpin = true;
             _miniGameSpin.StartSpin();
         }
-
         if (!_slotSpinModel.IsSpin && !_slotSpinModel.IsMiniGameSpin)
         {
+            _cardsButton.SetActive(true);
+            _slotsCanvas.SetActive(true);
+            _rouleteCanvas.SetActive(false);
             if (_accountModel.Vault - _spinRewardConfig.OneSpinCost < 0)
             {
                 Debug.LogError("No moneeeeeey");

@@ -28,6 +28,10 @@ public class StatesController : MonoBehaviour
 
     private void DisableCardButton()
     {
+        if (_slotsCardsButton.gameObject == null)
+            return;
+
+
         if (!_slotSpinModel.IsSpin)
         {
             _slotsCardsButton.gameObject.SetActive(true);

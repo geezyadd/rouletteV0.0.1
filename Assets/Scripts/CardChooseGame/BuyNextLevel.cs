@@ -34,7 +34,7 @@ public class BuyNextLevel : MonoBehaviour
     {
         if (_levelModel.CurrentLevel == 10)
         {
-            _buyButton.gameObject.SetActive(false);
+            _buyButton.interactable = false;
         }
     }
 
